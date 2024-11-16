@@ -1,0 +1,202 @@
+@font-face {
+    font-family: inter;
+    src: url(../font/Inter-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+    font-family: josefin;
+    src: url(../font/JosefinSlab-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+
+/*Navigation*/
+
+.navigation_container{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.navigation_container ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navigation_container li{
+    margin-inline: 2%;
+    margin-block: 10px;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.navigation_container li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.navigation_container li a:hover{
+    color: #708D21;
+    text-decoration: underline;
+    -webkit-text-stroke: 0 black;
+}
+
+main{
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+}
+
+
+/* background  */
+.background_container{
+    z-index: -2;
+}
+
+div#pfp_img {
+    position: absolute;
+    width: 800px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -55%);
+    z-index: -1;
+}
+
+div#pfp_img > img{
+    width: 100%;
+}
+
+#svg_bg_1 {
+    transform: translate(-74.5%, -50%);
+}
+
+#svg_bg_2 {
+    transform: translate(-15%, -50%);
+}
+
+#svg_bg_2, 
+#svg_bg_1{
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    width: 3000px;    
+    height: 1000px;  
+    overflow: hidden;  
+    z-index: -1;
+}
+
+/* --------------------------------------------------- */
+
+#main_content_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    z-index: 1;
+    max-width: 2150px;
+    width: 47%;
+    max-width: 700px;
+    color: white;
+}
+#main_content_container > #hello{
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#main_content_container > #field{
+    font-weight: 500;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+#main_content_container > #qoute{
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+#main_content_container > #hireme {
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 40px;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    background-color: white; 
+    color: black; 
+    overflow: hidden; 
+    z-index: 0; 
+    cursor: pointer;
+    transition: all 0.5s ease; 
+}
+
+#main_content_container > #hireme::before {
+    content: "";
+    width: 120%;
+    height: 120%;
+    background-color: #708D21; 
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    right: 100%;
+    transition: right 0.5s ease; 
+    z-index: -1; 
+}
+
+#main_content_container > #hireme:hover {
+    color: white; 
+}
+
+#main_content_container > #hireme:hover::before {
+    right: -20px;
+}
+
+
+
+/* about section  */
+
+#about{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 20px 50px;
+}
+
+#about h1{
+    font-size: 3rem;
+    margin-block: 50px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
+
+#about p{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-block: 50px;
+    letter-spacing: 2px;
+}
+
+
+/* project section  */
+
+#project{
+    background-color: #080808;
+    width: 100%;
+    height: 100vh;
+}
